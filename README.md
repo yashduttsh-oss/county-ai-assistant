@@ -10,7 +10,7 @@ County AI Assistant is a retrieval-augmented generation (RAG) assistant that ans
 
 **Live app:** (https://county-ai-assistant.streamlit.app/)
 
-> ![alt text]({A0F9C673-9C8B-4598-901B-7D55A50A4351}.png)
+> ![County AI Assistant screenshot](assets/county_assistant.png)
 
 ## Features
 
