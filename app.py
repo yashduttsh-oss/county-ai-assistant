@@ -10,6 +10,17 @@ import streamlit as st
 
 import rag
 
+# --- Build the index on first run -------------------------------------------
+# The index/ folder is git-ignored (a regenerable build artifact), so a fresh
+# deployment won't have it. Rebuild it from the committed docs/ before serving
+# any question. This is a one-time cost on cold start.
+from pathlib import Path
+
+import ingest
+
+if not Path("index/embeddings.npy").exists():
+    ingest.build_index()
+
 # --- Page header ------------------------------------------------------------
 st.set_page_config(page_title="County AI Assistant")
 st.title("County AI Assistant")

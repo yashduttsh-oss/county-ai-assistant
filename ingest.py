@@ -74,7 +74,7 @@ def chunk_text(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     return chunks
 
 
-def main():
+def build_index():
     # --- Step 1: locate source documents ------------------------------------
     source_files = sorted(
         p for p in DOCS_DIR.iterdir()
@@ -143,4 +143,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    build_index()
